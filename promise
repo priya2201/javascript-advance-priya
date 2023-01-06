@@ -1,0 +1,29 @@
+// const promise=new Promise((resolve,reject)=>{
+//     if(n<10)
+//     resolve("no is greater than 10");
+
+// reject("no is less than 10")
+// });
+function no(num){
+    return new Promise((resolve,reject)=>{
+        if(num>10){
+          return resolve("NUm is greater than 10");
+        }
+        else
+        {
+        
+            return  reject ("Num is less than 10");
+        }
+
+    })
+    
+}
+no(5).then((data)=>{
+    console.log("success")
+}).catch((err)=>{
+    console.log(err)
+})
+
+
+
+
