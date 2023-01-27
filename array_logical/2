@@ -1,0 +1,47 @@
+ const array1 = [ { key : 1 , value : "hello" } ,
+                     { key : 2 , value : "Geek" } ,
+                     { key : 3 , value : "GeeksforGeeks" } ,
+                     { key : 4 , value :"JavaScript"} ,
+                     { key : 5 , value : "Course" } ];
+ 
+    const array2 = [ { key : 11 , value : "Courses" } ,
+                     { key : 12 , value : "C++" } ,
+                     { key : 13 , value : "JAVA" } ,
+                     { key : 14 , value : "C" },
+                     { key : 15 , value : "Many more" } ];
+ 
+    const array = [ array1 , array2 ];
+ 
+    for( let x = 0 ; x < array.length ; x++ )
+    {
+        for( let y = 0 ; y < array[0].length ; y++)
+        {
+            console.log( array[x][y].value );
+        }
+    }
+
+    console.log('---------------------------------------------------------------------');
+    const arrayp = [ { key : 1 , value : "hello" } ,
+                     { key : 2 , value : "Geek" } ,
+                     { key : 3 , value : "GeeksforGeeks" } ,
+                     { key : 4 , value :"JavaScript"} ,
+                     { key : 5 , value : "Course" } ];
+ 
+    const arraym = [ { key : 11 , value : "Courses" } ,
+                     { key : 12 , value : "C++" } ,
+                     { key : 13 , value : "JAVA" } ,
+                     { key : 14 , value : "C" },
+                     { key : 15 , value : "Many more" } ];
+    const arrays = [ { key : 11 , value : "Courses" } ,
+                     { key : 12 , value : "C++" } ,
+                     { key : 13 , value : "JAVA" } ,
+                     { key : 14 , value : "C" },
+                     { key : 15 , value : "Many more" }];
+    const arr=[arrayp,arraym,arrays];
+    console.log(arr);
+for(let x=0;x<arr.length;x++)
+    {
+        for(let y=0;y<arr[0].length;y++){
+            console.log(arr[x][y].value)
+        }
+    }

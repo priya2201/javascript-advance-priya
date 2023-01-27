@@ -1,0 +1,26 @@
+let numbers_array = [
+    [
+        [100, 100, 100],
+        [100, 100, 98, 50],
+        [100, 100, 100, 20],
+    ],
+    [
+        [100, 100, 100, 99],
+        [100, 100, 100, 100],
+    ],
+];
+  
+let desired_output = (numbers_array) => {
+    let data = numbers_array.map((item) =>
+        item.map((row) => {
+            let total_value = row.reduce(
+                (previous_value, current_value) => previous_value + current_value,
+                0
+            );
+            return { total: total_value };
+        })
+    );
+    return data;
+};
+  
+console.log(desired_output(numbers_array));

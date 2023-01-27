@@ -1,0 +1,19 @@
+let arr = [];
+ 
+// push() is used to add the element in last
+arr.push(5);
+arr.push(10);
+arr.push("Prince");
+arr.push("Aditya");
+ 
+// Accessing the keys of array
+// using the object property
+let keys = Object.keys(arr).join(" ");
+ 
+// Accessing the values of array
+// using the object property
+let values = Object.values(arr).join(" ");
+
+ 
+console.log("The keys of array is: " + keys);
+console.log("The values of array is: " + values);

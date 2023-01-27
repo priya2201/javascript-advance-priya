@@ -1,0 +1,32 @@
+let employees_details = [
+    { name: "Ram", age: 17 },
+    { name: "Shyam", age: 17 },
+    { name: "Mohan", age: 30 },
+];
+  
+let desired_output = (employees_details) => {
+    let unique_values = employees_details
+        .map((item) => item.age)
+        .filter(
+            (value, index, current_value) => current_value.indexOf(value) === index
+        );
+    return unique_values;
+};
+  
+console.log(desired_output(employees_details));
+
+
+let employees1_details = [
+    { name: "Ram", age: 17 },
+    { name: "Shyam", age: 17 },
+    { name: "Mohan", age: 30 },
+];
+
+let desired_output1 = (employees1_details) => {
+    let unique_values=[
+        ...new Set(employees1_details.map((element)=>element.age))
+    ];
+    return unique_values
+};
+
+console.log(desired_output1(employees_details));

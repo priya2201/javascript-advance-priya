@@ -1,0 +1,20 @@
+let fruits=[{
+apple:2,
+mango:3
+},{
+    apple:4,
+    mango:7
+},{
+    apple:8,
+    mango:11
+}]
+let desiredvalue=(fruits=>{
+    let output=[];
+    for(let item of fruits){
+        output.push(item.mango)
+    }
+    return output
+})
+console.log(desiredvalue)
+let result=desiredvalue(fruits);
+console.log(result)
