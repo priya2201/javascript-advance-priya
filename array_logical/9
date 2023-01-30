@@ -1,0 +1,51 @@
+//spread
+
+function sayGreeting(greeting, ...name) {
+  console.log(greeting + ' ' + name);
+}
+
+sayGreeting('Hello', 'Mike', 'Greg', 'Tom');
+
+//currying
+//regular function
+const add=(a,b,c)=>{
+    return a+b+c
+}
+console.log(add(1,2,3));
+
+//in currying
+const addCurry=(a)=>{
+return(b)=>{
+    return(c)=>{
+        return(d)=>{
+            return a+b+c+d
+        }
+    }
+}
+}
+console.log(addCurry(1)(2)(3)(4))
+
+// const person={
+//     name:'siyu'
+// }
+// // person={
+// //     name:'siya'
+// // };
+// // person.name="vina"
+// // console.log(person.name)
+
+// Object.freeze(person);
+// person.name="hie"
+// console.log(person.name)
+
+
+let person = {
+    name: 'Mike',
+};
+
+// person.name = 'Bob';
+
+Object.freeze(person);
+person.name = 'Will';
+
+console.log(person.name)

@@ -1,0 +1,4 @@
+const arr = [{name:'piyu',name2:'vina'},{name:'anmol',name2:'tushi'},{name:'niki',name2:'mukesh'}]
+const filtername2 = arr.filter(m=>m.name2 === 'tushi')
+const obj = (filtername2[0])
+console.log(obj.name)
