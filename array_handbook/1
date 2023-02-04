@@ -1,0 +1,114 @@
+//arrays can be collection of elements of any type
+// string,number,boolean,object and even other arrays
+let arr=new Array(2);
+console.log(arr);
+
+let arr1=new Array(1,2,3);
+console.log(arr1);
+
+let salad=['a','b','c','d'];
+console.log(salad.length);
+let len=salad.length;
+console.log([len-2]);
+console.log([len-1]);
+
+for(i=0;i<salad.length;i++){
+    console.log(`Element accessed at index ${i} =${salad[i]}`)
+}
+//destructuring imp
+let [tomato,mushroon,onion]=[1,2,3];
+console.log(tomato);
+// not destructuring
+let veg=[1,2,3];
+let tom=veg[1];
+console.log(tom);
+
+let [hie,hello=true]=[false];
+console.log(hie);
+console.log(hello)
+//skipping destructuring
+let [tomato1, , carrot] = ['🍅', '🍄', '🥕'];
+console.log(tomato1);
+console.log(carrot)
+
+//how to do nesting in array 
+// without destructuring
+let veg1=[1,2,3,[4,5,6]];
+let veg2=veg1[3];
+console.log(veg2);
+let veg3=veg2[2];
+console.log(veg3);
+
+veg1=[3][2];
+console.log(veg1); //undefined
+
+let veg4=veg1=[3,2];
+console.log(veg4);
+
+
+//short hand syntax
+let vegy=[1,2,3,[4,5,6]]
+console.log(vegy[3][1]);
+
+//destructuing syntax
+let[,,,[,,hmm]]=[1,2,3,[4,5,6]];
+let [,,,,[,carrot2,]] = ['🍈', '🍍', '🍌', '🍉', ['🍅', '🍄', '🥕']];
+console.log([hmm]);
+console.log([carrot2])
+
+//How to Use the Spread Syntax and Rest Parameter in JavaScript
+//Since ES6, we can use the ... (yes, three consecutive dots) as spread syntax and the rest parameter in array destructuring.
+// For the rest parameter, the ... appears on the left side of the destructuring syntax.
+// For the spread syntax, the ... appears on the right side of the destructuring syntax.
+
+const [tomato2, mushroom2, ...rest] = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+console.log(tomato2);
+console.log(mushroom2);
+console.log(rest);
+
+//with spread operator you can create copy/clone of an existing array
+const salad1 = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+const saladcloned=[...salad1];
+console.log(salad1);
+console.log(saladcloned);
+
+console.log(salad1 === saladcloned);
+
+//swap values with destructuring
+let first = '😔';
+let second = '🙂';
+[first, second] = [second, first];
+
+console.log(first);  // '🙂'
+console.log(second); // '😔'
+
+//slice creates a shallow copy of an array
+
+//How to Create, Remove, Update, and Access Arrays in JavaScript
+const first1= [1, 2, 3];
+const second1 = [4, 5, 6];
+
+const merged = first1.concat(second1);
+console.log(merged);
+console.log(first1);
+console.log(second1);
+
+// The join() method joins all the elements of the array using a separator and returns a string. The default separator used for joining is comma(,).
+const emotions = ['🙂', '😍', '🙄', '😟'];
+console.log(emotions.join())
+console.log(emotions.join('-'))
+
+let hiee=[].join();
+console.log(hiee)  // returns ''
+
+//The fill() method fills an array with a static value. You can change all the elements to a static value or change a few selected items. Note that the fill() method changes the original array.
+const colors = ['red', 'blue', 'green'];
+
+colors.fill('pink');
+// console.log(colors); 
+colors.fill('yellow',1,3);
+//first argument which element to change
+// second argument which index starts with 0
+//third argument which position ends with value.length
+// and  it gives the actual position not index it gives value
+console.log(colors);

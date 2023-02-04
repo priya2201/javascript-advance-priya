@@ -1,0 +1,26 @@
+let list=[1,'string',{type:true},[22,33,44]];
+// console.log(list[2].type)
+list.push('at the end')
+list.unshift('at the beginning')
+// list.forEach(function(item){
+//     console.log(item);
+// })
+let lastitem=list.pop();
+// console.log(lastitem)
+
+let firstitem=list.shift();
+// console.log(firstitem);
+
+let arr=['hie','hello','hey'];
+arr=arr.map(function(ar){
+    let li=document.createElement('li');
+    li.textContent=li;
+    return li;
+})
+// console.log(arr);
+let ul=document.createElement('ul');
+arr.forEach(function(element){
+    ul.appendChild(element)
+})
+document.body.appendChild(ul);
+
